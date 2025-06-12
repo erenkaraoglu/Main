@@ -92,6 +92,19 @@
             border-bottom-left-radius: 10px; /* Ensure the top image also has rounded corners */
             border-bottom-right-radius: 10px;
         }
+
+        .masonry-container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .masonry-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
     </style>
 </head>
 
@@ -172,39 +185,36 @@
 
     <div class="container">
         <div class="text-center">
-            <h1 class="p-5">Art Section</h1>
+            <h1 class="p-5">Art Gallery</h1>
         </div>
 
-        <div class="row mt-5">
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img class="card-img-top" src="../img/art/bugFinal.png" alt="Art Image">
-                    </div>
+        <div class="masonry-container">
+            <div class="masonry-column">
+                <div class="card">
+                    <img class="card-img-top" src="../img/art/bugFinal.png" alt="Art Image">
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img class="card-img-top" src="../img/art/nebulaRENDER.png" alt="Art Image">
-                    </div>
+                <div class="card">
+                    <img class="card-img-top" src="../img/art/sur.png" alt="Art Image">
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img class="card-img-top" src="../img/art/ParallelView.png" alt="Art Image">
-                    </div>
+            </div>
+            <div class="masonry-column">
+                <div class="card">
+                    <img class="card-img-top" src="../img/art/nebulaRENDER.png" alt="Art Image">
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img class="card-img-top" src="../img/art/sur.png" alt="Art Image">
-                    </div>
+                <div class="card">
+                    <img class="card-img-top" src="../img/art/print.jpg" alt="Art Image">
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img class="card-img-top" src="../img/art/print.jpg" alt="Art Image">
-                    </div>
+            </div>
+            <div class="masonry-column">
+                <div class="card">
+                    <img class="card-img-top" src="../img/art/ParallelView.png" alt="Art Image">
                 </div>
+                <div class="card">
+                    <img class="card-img-top" src="../img/art/BuggyGolfTimeFINAL.png" alt="Art Image">
+                </div>
+                
+            </div>
         </div>
-
-        <!-- Add more rows and columns as needed -->
-
     </div>
     <!-- Bootstrap JavaScript -->
     <script src="../js/bootstrap.js"></script>
