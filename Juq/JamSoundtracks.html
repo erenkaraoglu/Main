@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Game Jam Projects</title>
+    <title>Jam Soundtracks</title>
     <link rel="stylesheet" href="../css/bootstrap.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
@@ -32,49 +32,34 @@
             padding: 10px 0;
         }
 
-        .masonry-container {
-            display: flex;
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .masonry-column {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
         .card {
-            margin: 0;
-            height: auto;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             transition: 0.3s;
             background-color: #000;
             border: 3px solid #fff; /* Thicker border */
             color: #fff;
             border-radius: 15px; /* Add rounded corners */
-            margin-bottom: 0;
-            height: fit-content;
-            width: 100%;
         }
 
             .card:hover {
                 box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
             }
 
-        .card-title,
-        .card-text {
-            color: #fff;
+        .card-title {
+            color: #fff; /* Make card title text white */
         }
 
-        a {
-            color: initial;
+        .card-body {
+            color: #fff; /* Make all text inside card body white */
         }
 
-            a:hover {
-                text-decoration: initial;
+            .card-body a {
+                color: #fff; /* Make links inside card body white */
             }
+
+        a:hover {
+            text-decoration: initial;
+        }
 
         .text-muted i {
             margin: 0 10px;
@@ -105,8 +90,13 @@
         }
 
         .card-img-top {
-            border-top-left-radius: 15px; /* Ensure the top image also has rounded corners */
-            border-top-right-radius: 15px;
+            border-top-left-radius: 10px; /* Ensure the top image also has rounded corners */
+            border-top-right-radius: 10px;
+        }
+
+        /* Add custom style to make the iframe rounded */
+        .rounded-iframe iframe {
+            border-radius: 15px; /* Add rounded corners to the iframe */
         }
     </style>
 </head>
@@ -144,7 +134,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-black navbar-large">
     <div class="container-fluid">
-        <a href="Home.html"><img src="../img/Logo.svg" class="navbar-brand logo-large" href="Jam.html#" width="80" /></a>
+        <a href="Home.html"><img src="../img/Logo.svg" class="navbar-brand logo-large" href="JamSoundtracks.html#" width="80" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -188,94 +178,34 @@
 
     <div class="container">
         <div class="text-center">
-            <h1 class="p-5">Game Jam Projects I've Contributed To</h1>
+            <h1 class="p-5">Jam Soundtracks</h1>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6 mb-5">
+                <div class="card horizontal">
+                    <div class="row g-0">
+                        <div class="col-md-4 rounded-iframe">
+                            <iframe class="img-fluid" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1684016322&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Adıyaman Express (Original Soundtrack)</h5>
+                                <p class="card-text">by <a href="https://soundcloud.com/eren-kara-lu-878295884" title="CuqqaCoin" target="_blank">CuqqaCoin</a></p>
+                                <p class="card-text">
+                                    <small class="text-muted">
+                                        Listen on
+                                        <a href="https://soundcloud.com/eren-kara-lu-878295884/adiyaman-express-original-soundtrack" title="Adıyaman Express (Original Soundtrack)" target="_blank">SoundCloud</a>
+                                    </small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Second Card -->
+            
         </div>
 
-        <div class="masonry-container">
-            <!-- First Column -->
-            <div class="masonry-column">
-                <div class="card">
-                    <img class="card-img-top" src="../img/projects/adiyaman.png" alt="Card image cap">
-                    <div class="card-body custom-card-tex">
-                        <h5 class="card-title text-center">Adıyaman Express</h5>
-                        <p class="card-text text-center">Mağara Jam '23</p>
-                    </div>
-                    <div class="card-body custom-card-tex">
-                        <p class="fs-6 card-text text-center">November 2023</p>
-                    </div>
-                    <a href="https://yusplay.itch.io/adiyaman-express" class="btn btn-custom">Take a Look</a>
-                </div>
-
-                <div class="card">
-                    <img class="card-img-top" src="../img/projects/farkli.png" alt="Card image cap">
-                    <div class="card-body custom-card-tex">
-                        <h5 class="card-title text-center">Farklı Biri</h5>
-                        <p class="card-text text-center">Mağara Jam #4</p>
-                    </div>
-                    <div class="card-body custom-card-tex">
-                        <p class="fs-6 card-text text-center">February 2022</p>
-                    </div>
-                    <a href="https://itch.io/jam/magara-jam-4/rate/1411184" class="btn btn-custom">Take a Look</a>
-                </div>
-            </div>
-
-            <!-- Second Column -->
-            <div class="masonry-column">
-                <div class="card">
-                    <img class="card-img-top" src="../img/art/yesil.png" alt="Card image cap">
-                    <div class="card-body custom-card-tex">
-                        <h5 class="card-title text-center">Yeşillik Olmasın</h5>
-                        <p class="card-text text-center">Mağara Jam #5</p>
-                    </div>
-                    <div class="card-body custom-card-tex">
-                        <p class="fs-6 card-text text-center">September 2022</p>
-                    </div>
-                    <a href="https://ozmencivan.itch.io/yesillik-olmasin" class="btn btn-custom">Take a Look</a>
-                </div>
-
-                <div class="card">
-                    <img class="card-img-top" src="../img/projects/peynir.png" alt="Card image cap">
-                    <div class="card-body custom-card-tex">
-                        <h5 class="card-title text-center">Peynir faresi</h5>
-                        <p class="card-text text-center">HUJAM'22.2</p>
-                    </div>
-                    <div class="card-body custom-card-tex">
-                        <p class="fs-6 card-text text-center">February 2022</p>
-                    </div>
-                    <a href="https://itch.io/jam/hujam/rate/1399192" class="btn btn-custom">Take a Look</a>
-                </div>
-            </div>
-
-            <!-- Third Column -->
-            <div class="masonry-column">
-                <div class="card">
-                    <img class="card-img-top" src="../img/projects/acemi.png" alt="Card image cap">
-                    <div class="card-body custom-card-tex">
-                        <h5 class="card-title text-center">Acemi Profesör</h5>
-                        <p class="card-text text-center">ASELJAM</p>
-                    </div>
-                    <div class="card-body custom-card-tex">
-                        <p class="fs-6 card-text text-center">May 2022</p>
-                    </div>
-                    <a href="https://itch.io/jam/aselsanmtalgamejam/rate/1521115" class="btn btn-custom">Take a Look</a>
-                </div>
-            
-                <div class="card">
-                    <img class="card-img-top" src="../img/projects/swarm.png" alt="Card image cap">
-                    <div class="card-body custom-card-tex">
-                        <h5 class="card-title text-center">SWARMAGEDDON</h5>
-                        <p class="card-text text-center">GOAT Jam 2</p>
-                    </div>
-                    <div class="card-body custom-card-tex">
-                        <p class="fs-6 card-text text-center">May 2025</p>
-                    </div>
-                    <a href="https://gokomon.itch.io/swarmageddon" class="btn btn-custom">Take a Look</a>
-                </div>
-            
-            </div>
-
-        </div>
-        
         <!-- Add more rows and columns as needed -->
 
     </div>

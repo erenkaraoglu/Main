@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Research Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
     <link rel="stylesheet" href="../css/bootstrap.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
@@ -12,7 +12,6 @@
 
         body {
             margin: 0;
-            background: #232321;
         }
 
         canvas {
@@ -27,72 +26,60 @@
             user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
         }
 
-        h1 {
-            color: #fff;
-            padding: 10px 0;
-        }
-
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            transition: 0.3s;
-            background-color: #000;
-            border: 3px solid #fff; /* Thicker border */
-            color: #fff;
-            border-radius: 15px; /* Add rounded corners */
-        }
-
-            .card:hover {
-                box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
-            }
-
-        .card-title,
-        .card-text {
-            color: #fff;
-        }
-
-        a {
-            color: initial;
-        }
-
-            a:hover {
-                text-decoration: initial;
-            }
-
-        .text-muted i {
-            margin: 0 10px;
-        }
-
-        .btn-custom {
-            display: block;
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            background-color: #fff;
-            color: #000;
-            text-align: center;
-            padding: 10px 0;
-            border: none;
-            border-bottom-left-radius: 10px; /* Match the card's bottom corners */
-            border-bottom-right-radius: 10px; /* Match the card's bottom corners */
-            border-top-left-radius: 0px;
-            border-top-right-radius: 0px;
-            transition: background-color 0.3s;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1; /* Behind other content */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align items to the top */
         }
 
-        .custom-card-text-c {
-            border-bottom-left-radius: 10px; /* Match the card's bottom corners */
-            border-bottom-right-radius: 10px; /* Match the card's bottom corners */
+            .video-container video {
+                position: absolute;
+                width: auto;
+                height: 100%;
+                min-width: 100%;
+                min-height: 100%;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%) translateY(40%) scale(1.5); /* Center horizontally, translate up, and scale */
+            }
+
+        /* Media query for tablets and smaller screens */
+        @media (max-width: 1024px) {
+            .video-container {
+                align-items: center; /* Center vertically on tablets */
+            }
+
+                .video-container video {
+                    transform: translateX(-50%) translateY(80%) scale(1.8); /* Adjust positioning and scale for tablets */
+                }
         }
 
-        .btn-custom:hover {
-            background-color: #e0e0e0;
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+            .video-container {
+                align-items: center; /* Center vertically on mobile */
+            }
+
+                .video-container video {
+                    transform: translateX(-90%) translateY(50%) scale(1.2); /* Adjust positioning and scale for mobile */
+                }
         }
 
-        .card-img-top {
-            border-top-left-radius: 15px; /* Ensure the top image also has rounded corners */
-            border-top-right-radius: 15px;
+        /* Profile for desktop */
+        @media (min-width: 1025px) {
+            .video-container video {
+                transform: translateX(-50%) translateY(110%) scale(2.5); /* Default position and scale for desktop */
+            }
         }
     </style>
 </head>
-
 <body class="bg-black">
     <header>
         <!-- Include the navbar partial view -->
@@ -126,7 +113,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-black navbar-large">
     <div class="container-fluid">
-        <a href="Home.html"><img src="../img/Logo.svg" class="navbar-brand logo-large" href="ResearchProjects.html#" width="80" /></a>
+        <a href="Home.html"><img src="../img/Logo.svg" class="navbar-brand logo-large" href="About.html#" width="80" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -167,63 +154,27 @@
 </nav>
 
     </header>
-
-    <div class="container">
-        <div class="text-center">
-            <h1 class="p-5">Research Projects I've Contributed To</h1>
-        </div>
-
-        <div class="row mt-5">
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img class="card-img-top" src="../img/projects/vr4d.png" alt="Card image cap">
-                    <div class="card-body custom-card-tex">
-                        <h5 class="card-title text-center">VR4D</h5>
-                        <p class="card-text text-center">Tübitak 2204-A</p>
-                    </div>
-                    <div class="card-body custom-card-tex">
-                        <p class="fs-6 card-text text-center">2022-2023</p>
-                    </div>
-                    <a href="https://drive.google.com/file/d/1O-znjFT6wYbZewMWTVDj-Po9KkHqZCyi/view" class="btn btn-custom">Take a Look</a>
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center align-items-center vh-50">
+            <div class="row justify-content-center">
+                <div class="col text-center">
+                    <h1 style="font-size: 90px" class="no-select text-white">About me</h1>
                 </div>
             </div>
-
-
-             <div class="col-md-4 mb-4">
-                 <div class="card">
-                     <img class="card-img-top" src="../img/projects/teknofest.jpg" alt="Card image cap">
-                     <div class="card-body custom-card-tex">
-                         <h5 class="card-title text-center">Alfa AI Team</h5>
-                         <p class="card-text text-center">TEKNOFEST 2023 Artificial Intelligence in Healthcare Competition High School Level Disease Detection with Computer Vision Categoryn</p>
-                     </div>
-                     <div class="card-body custom-card-tex">
-                         <p class="fs-6 card-text text-center">2022-2023</p>
-                     </div>
-                     <a href=" https://www.teknofest.org/tr/content/announcement/teknofest-2023-saglikta-yapay-zeka-yarismasi-final-siralamalari-aciklandi/" class="btn btn-custom">Take a Look</a>
-                 </div>
-             </div>
-            
-            
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img class="card-img-top" src="../img/projects/ekos.png" alt="Card image cap">
-                    <div class="card-body custom-card-tex">
-                        <h5 class="card-title text-center">EkoS</h5>
-                        <p class="card-text text-center">Tübitak 2204-D</p>
-                    </div>
-                    <div class="card-body custom-card-tex">
-                        <p class="fs-6 card-text text-center">2021-2022</p>
-                    </div>
-                    <a href="https://ekosproje.itch.io/ekos" class="btn btn-custom">Take a Look</a>
-                </div>
-            </div>
-
         </div>
-
-        <!-- Add more rows and columns as needed -->
-
     </div>
-    <!-- Bootstrap JavaScript -->
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center align-items-center vh-50">
+            <div class="mt-5 row justify-content-center">
+                <div class="col text-center">
+                    <p class="text-white fs-3">I'm an artist who loves creating games, music, and illustrations. I use tools like Unity, Godot, FL Studio, Blender, Krita, Photoshop, and Illustrator to bring my ideas to life. I focus on making fun and immersive game experiences, composing music that resonates, and crafting beautiful digital art. I'm always excited to learn new techniques and improve my skills, continually pushing the boundaries of what I can create.</p>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="../js/bootstrap.js"></script>
+
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Jam Soundtracks</title>
+    <title>Art</title>
     <link rel="stylesheet" href="../css/bootstrap.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
@@ -45,21 +45,18 @@
                 box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
             }
 
-        .card-title {
-            color: #fff; /* Make card title text white */
+        .card-title,
+        .card-text {
+            color: #fff;
         }
 
-        .card-body {
-            color: #fff; /* Make all text inside card body white */
+        a {
+            color: initial;
         }
 
-            .card-body a {
-                color: #fff; /* Make links inside card body white */
+            a:hover {
+                text-decoration: initial;
             }
-
-        a:hover {
-            text-decoration: initial;
-        }
 
         .text-muted i {
             margin: 0 10px;
@@ -92,11 +89,21 @@
         .card-img-top {
             border-top-left-radius: 10px; /* Ensure the top image also has rounded corners */
             border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px; /* Ensure the top image also has rounded corners */
+            border-bottom-right-radius: 10px;
         }
 
-        /* Add custom style to make the iframe rounded */
-        .rounded-iframe iframe {
-            border-radius: 15px; /* Add rounded corners to the iframe */
+        .masonry-container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .masonry-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
     </style>
 </head>
@@ -134,7 +141,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-black navbar-large">
     <div class="container-fluid">
-        <a href="Home.html"><img src="../img/Logo.svg" class="navbar-brand logo-large" href="JamSoundtracks.html#" width="80" /></a>
+        <a href="Home.html"><img src="../img/Logo.svg" class="navbar-brand logo-large" href="Art.html#" width="80" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -178,36 +185,36 @@
 
     <div class="container">
         <div class="text-center">
-            <h1 class="p-5">Jam Soundtracks</h1>
+            <h1 class="p-5">Art Gallery</h1>
         </div>
-        <div class="row mt-5">
-            <div class="col-md-6 mb-5">
-                <div class="card horizontal">
-                    <div class="row g-0">
-                        <div class="col-md-4 rounded-iframe">
-                            <iframe class="img-fluid" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1684016322&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Adıyaman Express (Original Soundtrack)</h5>
-                                <p class="card-text">by <a href="https://soundcloud.com/eren-karao-lu-878295884" title="CuqqaCoin" target="_blank">CuqqaCoin</a></p>
-                                <p class="card-text">
-                                    <small class="text-muted">
-                                        Listen on
-                                        <a href="https://soundcloud.com/eren-karao-lu-878295884/adiyaman-express-original-soundtrack" title="Adıyaman Express (Original Soundtrack)" target="_blank">SoundCloud</a>
-                                    </small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+
+        <div class="masonry-container">
+            <div class="masonry-column">
+                <div class="card">
+                    <img class="card-img-top" src="../img/art/bugFinal.png" alt="Art Image">
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="../img/art/sur.png" alt="Art Image">
                 </div>
             </div>
-            <!-- Second Card -->
-            
+            <div class="masonry-column">
+                <div class="card">
+                    <img class="card-img-top" src="../img/art/nebulaRENDER.png" alt="Art Image">
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="../img/art/print.jpg" alt="Art Image">
+                </div>
+            </div>
+            <div class="masonry-column">
+                <div class="card">
+                    <img class="card-img-top" src="../img/art/ParallelView.png" alt="Art Image">
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="../img/art/BuggyGolfTimeFINAL.png" alt="Art Image">
+                </div>
+                
+            </div>
         </div>
-
-        <!-- Add more rows and columns as needed -->
-
     </div>
     <!-- Bootstrap JavaScript -->
     <script src="../js/bootstrap.js"></script>
